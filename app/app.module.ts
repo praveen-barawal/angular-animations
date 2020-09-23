@@ -14,10 +14,11 @@ import {
   MatSlideToggleModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { SwitchComponent } from './toggle/toggle.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule, MdToolbarModule, MdTabsModule, MdButtonModule, MdInputModule, MdDatepickerModule, MdNativeDateModule, MdCheckboxModule, MdRadioModule ,MatSlideToggleModule],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, SwitchComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
