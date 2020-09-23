@@ -1,10 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'switch',
-  templateUrl: './switch.component.html',
+  selector: 'toggle',
+  templateUrl: './toggle.component.html',
 })
-export class SwitchComponent  {
+export class ToggleComponent  {
   @Input() on: boolean;
-  @Input() className: string;
+  @Output() toggled: EventEmitter<boolean> = new EventEmitter();
+
+  onClick() {
+    this.on = !this.on;
+    this.toggled.emit(this.on);
+  }
 }
